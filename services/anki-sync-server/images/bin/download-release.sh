@@ -1,12 +1,12 @@
 #!/bin/sh
 # file: download-release.sh
 
-
 mkdir -p release
 
 cd release
 
-git clone https://github.com/ankicommunity/anki-sync-server
+git clone ${ANKISYNCD_GIT_REPOSITORY_URL}
+git checkout ${ANKISYNCD_GIT_BRANCH}
 
 mv anki-sync-server/src/* .
 
