@@ -8,7 +8,7 @@ WORKDIR ${ANKISYNCD_ROOT}
 COPY bin/download-release.sh ./bin/download-release.sh
 
 ARG ANKISYNCD_COMMIT='latest'
-ENV ANKISYNCD_COMMIT=${ANKISYNCD_COMMIT}
+LABEL ANKISYNCD_COMMIT=${ANKISYNCD_COMMIT}
 
 ARG PYTHONUSERBASE=/opt/venv
 RUN sh ./bin/download-release.sh && \
